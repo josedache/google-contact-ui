@@ -1,0 +1,28 @@
+import React, { Component } from 'react';
+import CssBaseline from '@material-ui/core/CssBaseline'
+import { MuiThemeProvider } from '@material-ui/core/styles'
+import Navbar from './components/Navbar'
+import Sidebar from './components/Sidebar'
+import Main from './components/Main'
+import { BrowserRouter as Router, } from 'react-router-dom'
+import theme from './styles/theme'
+
+class App extends Component {
+
+  render() {
+    return (
+      <MuiThemeProvider theme={theme}>
+        <Router>
+          <>
+            <CssBaseline />
+            <Navbar />
+            <Sidebar />
+            <Main />
+          </>
+        </Router>
+      </MuiThemeProvider>
+    );
+  }
+}
+
+export default App;
